@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
 import { Author, Startup } from "@/sanity/types";
+import { formatDate } from "@/lib/utils";
 
 export type StartupTypeCard = Omit<Startup, "author"> & { author?: Author };
 
@@ -21,7 +22,7 @@ const StartupCard = ({ post }: { post: StartupTypeCard }) => {
   return (
     <li className="startup-card group">
       <div className="flex-between">
-        <p>{_createdAt}</p>
+        <p>{formatDate(_createdAt)}</p>
         <div className="flex gap-1.5">
           <EyeIcon />
           <span className="text-16-medium">{views}</span>
