@@ -79,7 +79,7 @@ const StartupForm = () => {
   });
 
   return (
-    <form action={formAction} className="action-form">
+    <form action={formAction} className="startup-form">
       <div>
         <label htmlFor="title" className="startup-form_label">
           Title
